@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hogwarts Club Information</title>
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #e1d0b7; /* Light maroon tint */
+            color: #971717; /* Dark maroon text */
+        }
+        h1 {
+            color: #5c2323; /* Maroon */
+            text-align: center;
+            border-bottom: 2px solid #5c2323;
+            padding-bottom: 10px;
+        }
+        select, button {
+            padding: 10px;
+            margin: 10px 0;
+            width: 100%;
+            border: 1px solid #211c1c;
+            border-radius: 4px;
+            background-color: white;
+            color: #4a1c1c;
+        }
+        button {
+            background-color: #971717;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #683333; /* Darker maroon */
+        }
+        #club-info {
+            background-color: #fff0f0; /* Very light maroon tint */
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            border-left: 4px solid #800000;
+            color: #4a1c1c;
+        }
+        label {
+            font-weight: bold;
+            color: #800000;
+        }
+        option {
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hogwarts Club Information</h1>
+    
+    <label for="club-select">Select a club:</label>
+       <select id="club-select">
+        <option value="">-- Select a club --</option>
+        <option value="army">Dumbledore's Army</option>
+        <option value="dueling">Dueling Club</option>
+        <option value="potions">Potions Club</option>
+        <option value="dragon">Dragon Club</option>
+        <option value="hippogriff">Hippogriff Club</option>
+        <option value="gobstones">Gobstones Club</option>
+</select>
+    
+    <button id="show-info" py-click="show_club_info">Show Club Information</button>
+    
+    <pre id="club-info"></pre>
+    <script type="py" src="main.py"></script>
+</body>
+</html>
